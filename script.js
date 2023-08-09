@@ -28,6 +28,13 @@ addBtn.addEventListener("click", (e) => {
   addTask();
 });
 
+inputBox.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    addTask();
+  }
+});
+
 // add event to the list container
 listContainer.addEventListener(
   "click",
